@@ -6,8 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
-  <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/fonts.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <section class="filter">
       <div class="filter__select">
         <label for="marca">Filter by</label>
-        <select class="u-full-width" id="vehGroup">
+        <select id="vehGroup">
           <option value="">All</option>
           <!-- Revisar para hacer dinamico -->
           <option value="A">Group A</option>
@@ -28,16 +29,32 @@
       </div>
       <div class="filter__checkbox">
         <!-- Revisar para hacer dinamico -->
-        <input type="checkbox" name="transmition-manual" id="transmition-manual">
-        <label for="transmition-automatic">Manual Transmission</label>
-        <input type="checkbox" name="transmition-automatic" id="transmition-automatic">
-        <label for="transmition-automatic">Automatic Transmission</label>
-        <input type="checkbox" name="seats-five" id="seats-five">
-        <label for="seats-five">5 Seats</label>
-        <input type="checkbox" name="seats-seven-more" id="seats-seven-more">
-        <label for="seats-seven-more">7 Seats or more</label>
-        <input type="checkbox" name="convertibles" id="convertibles">
-        <label for="convertibles">Convertibles</label>
+        <div class="filter__transmition">
+          <div>
+            <input type="checkbox" name="transmition-manual" id="transmition-manual">
+            <label for="transmition-automatic">Manual Transmission</label>
+          </div>
+          <div>
+            <input type="checkbox" name="transmition-automatic" id="transmition-automatic">
+            <label for="transmition-automatic">Automatic Transmission</label>
+          </div>
+        </div>
+        <div class="filter__seats">
+          <div>
+            <input type="checkbox" name="seats-five" id="seats-five">
+            <label for="seats-five">5 Seats</label>
+          </div>
+          <div>
+            <input type="checkbox" name="seats-seven-more" id="seats-seven-more">
+            <label for="seats-seven-more">7 Seats or more</label>
+          </div>
+        </div>
+        <div class="filter__convertibles">
+          <div>
+            <input type="checkbox" name="convertibles" id="convertibles">
+            <label for="convertibles">Convertibles</label>
+          </div>
+        </div>
       </div>
     </section>
     <section class="card">
@@ -51,16 +68,17 @@
           <!-- Campo base datos -->
           <h2>Economy</h2>
           <!-- Campo base datos -->
-          <p>GROUP <span>A</span> <span>ECAR</span></p>
+          <p>GROUP <span>A</span> <span>(ECAR)</span></p>
           <!-- Campo base datos -->
           <p>Kia Rio or similar</p>
         </div>
         <div class="card__button">
-          <button>Book now!</button>
+          <button> <img src="./public/images/check.svg" alt="checked"> Book now!</button>
         </div>
       </header>
       <div class="card__content">
         <div class="card__characteristics">
+          <h3>Characteristics</h3>
           <div class="card__characteristics__item">
             <img src="./public/images/seats.svg" alt="seats">
             <!-- Campo base Datos -->
@@ -93,10 +111,71 @@
           </div>
         </div>
         <div class="card__available">
+          <h3>Available Rates</h3>
           <div class="card__aviable__options">
             <div class="card__aviable__input">
               <!-- Campo base de datos -->
-              <input type="checkbox" name="rates-ar" id="rates">
+              <input type="radio" name="rates-ar" id="rates">
+              <!-- Campo base de datos -->
+              <label for="rates-ar">AR - Most Inclusive</label>
+            </div>
+            <div class="card__aviable__title">
+              <p>Rates Inclusions</p>
+            </div>
+            <div class="card__aviable__price">
+              <!-- Campo base de datos -->
+              <p>USD <span>752.99</span></p>
+            </div>
+          </div>
+          <div class="card__aviable__options">
+            <div class="card__aviable__input">
+              <!-- Campo base de datos -->
+              <input type="radio" name="rates-ar" id="rates">
+              <!-- Campo base de datos -->
+              <label for="rates-ar">AR - Most Inclusive</label>
+            </div>
+            <div class="card__aviable__title">
+              <p>Rates Inclusions</p>
+            </div>
+            <div class="card__aviable__price">
+              <!-- Campo base de datos -->
+              <p>USD <span>752.99</span></p>
+            </div>
+          </div>
+          <div class="card__aviable__options">
+            <div class="card__aviable__input">
+              <!-- Campo base de datos -->
+              <input type="radio" name="rates-ar" id="rates">
+              <!-- Campo base de datos -->
+              <label for="rates-ar">AR - Most Inclusive</label>
+            </div>
+            <div class="card__aviable__title">
+              <p>Rates Inclusions</p>
+            </div>
+            <div class="card__aviable__price">
+              <!-- Campo base de datos -->
+              <p>USD <span>752.99</span></p>
+            </div>
+          </div>
+          <div class="card__aviable__options">
+            <div class="card__aviable__input">
+              <!-- Campo base de datos -->
+              <input type="radio" name="rates-ar" id="rates">
+              <!-- Campo base de datos -->
+              <label for="rates-ar">AR - Most Inclusive</label>
+            </div>
+            <div class="card__aviable__title">
+              <p>Rates Inclusions</p>
+            </div>
+            <div class="card__aviable__price">
+              <!-- Campo base de datos -->
+              <p>USD <span>752.99</span></p>
+            </div>
+          </div>
+          <div class="card__aviable__options">
+            <div class="card__aviable__input">
+              <!-- Campo base de datos -->
+              <input type="radio" name="rates-ar" id="rates">
               <!-- Campo base de datos -->
               <label for="rates-ar">AR - Most Inclusive</label>
             </div>
@@ -112,7 +191,7 @@
       </div>
     </section>
   </main>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
