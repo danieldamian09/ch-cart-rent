@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <main>
+    <section class="filter">
+      <div class="filter__select">
+        <label for="marca">Filter by</label>
+        <select class="u-full-width" id="vehGroup">
+          <option value="">All</option>
+          <!-- Revisar para hacer dinamico -->
+          <option value="A">Group A</option>
+          <option value="B">Group B</option>
+          <option value="C">Group C</option>
+          <option value="D">Group D</option>
+          <option value="E">Group E</option>
+          <option value="F">Group F</option>
+        </select>
+      </div>
+      <div class="filter__checkbox">
+        <!-- Revisar para hacer dinamico -->
+        <input type="checkbox" name="transmition-manual" id="transmition-manual">
+        <label for="transmition-automatic">Manual Transmission</label>
+        <input type="checkbox" name="transmition-automatic" id="transmition-automatic">
+        <label for="transmition-automatic">Automatic Transmission</label>
+        <input type="checkbox" name="seats-five" id="seats-five">
+        <label for="seats-five">5 Seats</label>
+        <input type="checkbox" name="seats-seven-more" id="seats-seven-more">
+        <label for="seats-seven-more">7 Seats or more</label>
+        <input type="checkbox" name="convertibles" id="convertibles">
+        <label for="convertibles">Convertibles</label>
+      </div>
+    </section>
+    <section class="card">
+      <header class="card__header">
+        <div class="card__image">
+          <!-- Campo base datos -->
+          <img src="https://www.avis.com/content/dam/cars/l/2020/kia/2020-kia-rio-s-sedan-grey_featured.png"
+            alt="car" />
+        </div>
+        <div class="card__title">
+          <!-- Campo base datos -->
+          <h2>Economy</h2>
+          <!-- Campo base datos -->
+          <p>GROUP <span>A</span> <span>ECAR</span></p>
+          <!-- Campo base datos -->
+          <p>Kia Rio or similar</p>
+        </div>
+        <div class="card__button">
+          <button>Book now!</button>
+        </div>
+      </header>
+      <div class="card__content">
+        <div class="card__characteristics">
+          <div class="card__characteristics__item">
+            <img src="./public/images/seats.svg" alt="seats">
+            <!-- Campo base Datos -->
+            <p><span>5</span> Seats</p>
+          </div>
+          <div class="card__characteristics__item">
+            <img src="./public/images/luggage.svg" alt="luggage">
+            <!-- Campo base Datos -->
+            <p><span>1</span> Large Suitcase</p>
+          </div>
+          <div class="card__characteristics__item">
+            <img src="./public//images/bag.svg" alt="bag">
+            <!-- Campo base Datos -->
+            <p><span>1</span> Small Suitcase</p>
+          </div>
+          <div class="card__characteristics__item">
+            <img src="./public/images/door.svg" alt="door">
+            <!-- Campo base Datos -->
+            <p><span>4</span> Doors</p>
+          </div>
+          <div class="card__characteristics__item">
+            <img src="./public/images/transmision.svg" alt="transmision">
+            <!-- Campo base Datos -->
+            <p><span>Automatic</span> Transmition</p>
+          </div>
+          <div class="card__characteristics__item">
+            <img src="./public/images/air-conditioning.svg" alt="">
+            <!-- Campo base Datos -->
+            <p>Air Conditioning</p>
+          </div>
+        </div>
+        <div class="card__available">
+          <div class="card__aviable__options">
+            <div class="card__aviable__input">
+              <!-- Campo base de datos -->
+              <input type="checkbox" name="rates-ar" id="rates">
+              <!-- Campo base de datos -->
+              <label for="rates-ar">AR - Most Inclusive</label>
+            </div>
+            <div class="card__aviable__title">
+              <p>Rates Inclusions</p>
+            </div>
+            <div class="card__aviable__price">
+              <!-- Campo base de datos -->
+              <p>USD <span>752.99</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
