@@ -24,8 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	createOptions(datos);
 	// Modal
 	const openMoldal = document.querySelectorAll(".card__aviable__title");
+	modal(openMoldal);
+
+});
+
+// Todo: que le modal se vuleva a llamar despues del filter
+function modal (openModal){
 	// Abrir el modal
-	openMoldal.forEach((item) => {
+	openModal.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			// Current Modal
 			const currentModal = e.target.previousElementSibling;
@@ -41,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
-});
+
+}
+
 
 // Crear los options 
 const createOptions = (data) => {
@@ -108,11 +116,15 @@ category.addEventListener("change", (e) => {
 		});
 		// Crear las tarjetas
 		createCards(filterCategory, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}else{
 		// Limpiar las tarjetas
 		card.innerHTML = "";
 		// Crear las tarjetas
 		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
 
@@ -123,16 +135,20 @@ transmitionManual.addEventListener("change", (e) => {
 		card.innerHTML = "";
 		// Filtrar por transmision manual
 		const filterTransmitionManual = datos.filter((item) => {
-			return item[1].Company1.TransmissionType === "Manual";
+			return item[1].Company1.TransmissionType  === "Manual";
 		});
 
 		// Crear las tarjetas
 		createCards(filterTransmitionManual, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	} else {
 		// Limpiar las tarjetas
 		card.innerHTML = "";
 		// Crear las tarjetas
 		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
 
@@ -148,11 +164,15 @@ transmitionAutomatic.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterTransmitionAutomatic, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	} else {
 		// Limpiar las tarjetas
 		card.innerHTML = "";
 		// Crear las tarjetas
 		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
 
@@ -168,6 +188,15 @@ seatsFive.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterSeatsFive, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
+	} else {
+		// Limpiar las tarjetas
+		card.innerHTML = "";
+		// Crear las tarjetas
+		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
 
@@ -183,11 +212,15 @@ seatsSevenMore.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterSeatsSevenMore, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	} else {
 		// Limpiar las tarjetas
 		card.innerHTML = "";
 		// Crear las tarjetas
 		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
 
@@ -203,10 +236,14 @@ convertibles.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterConvertibles, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	} else {
 		// Limpiar las tarjetas
 		card.innerHTML = "";
 		// Crear las tarjetas
 		createCards(datos, card);
+		const openMoldal = document.querySelectorAll(".card__aviable__title");
+		modal(openMoldal);
 	}
 });
