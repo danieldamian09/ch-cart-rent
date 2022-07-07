@@ -1,24 +1,23 @@
 export const createCards = (data, card) => {
-  // card.innerHTML = "";
+	// card.innerHTML = "";
 	// Destructuring the card object
 	// const {cars} = data;
 	// const datos = Object.entries(cars);
 	// Crear las tarjetas
-  data.forEach(([key, value]) => {
-    // console.log(value.Company1.Rates.AR.RateData.inclusions)
+	data.forEach(([key, value]) => {
+		// console.log(value.Company1.Rates.AR.RateData.inclusions)
 
-    const inclusionsAR = value.Company1.Rates.AR.RateData.inclusions;
-    const inclusions4M = value.Company1.Rates["4M"].RateData.inclusions;
-    const inclusionsF2 = value.Company1.Rates.F2.RateData.inclusions;
-    const inclusionsSC = value.Company1.Rates.SC.RateData.inclusions;
-    const inclusionsH8 = value.Company1.Rates.H8.RateData.inclusions;
-  
-    const inclusionsHX = value.Company2.Rates.HX.RateData.inclusions;
-    const inclusionsBZ = value.Company2.Rates.BZ.RateData.inclusions;
-    const inclusionsLQ = value.Company2.Rates.LQ.RateData.inclusions;
-    const inclusionsLV = value.Company2.Rates.LV.RateData.inclusions;
-    const inclusionsB9 = value.Company2.Rates.B9.RateData.inclusions;
+		const inclusionsAR = value.Company1.Rates.AR.RateData.inclusions;
+		const inclusions4M = value.Company1.Rates["4M"].RateData.inclusions;
+		const inclusionsF2 = value.Company1.Rates.F2.RateData.inclusions;
+		const inclusionsSC = value.Company1.Rates.SC.RateData.inclusions;
+		const inclusionsH8 = value.Company1.Rates.H8.RateData.inclusions;
 
+		const inclusionsHX = value.Company2.Rates.HX.RateData.inclusions;
+		const inclusionsBZ = value.Company2.Rates.BZ.RateData.inclusions;
+		const inclusionsLQ = value.Company2.Rates.LQ.RateData.inclusions;
+		const inclusionsLV = value.Company2.Rates.LV.RateData.inclusions;
+		const inclusionsB9 = value.Company2.Rates.B9.RateData.inclusions;
 
 		card.innerHTML += `
     <!-- Card 1 -->
@@ -34,40 +33,40 @@ export const createCards = (data, card) => {
         <p>${value.Company1.Name}</p>
       </div>
       <div class="card__button">
-        <button> <img src="./public/images/check.svg" alt="checked"> Book now!</button>
+        <button> <img src="./images/check.svg" alt="checked"> Book now!</button>
       </div>
     </header>
     <div class="card__content">
       <div class="card__characteristics">
         <h3>Characteristics</h3>
         <div class="card__characteristics__item">
-          <img src="./public/images/seats.svg" alt="seats">
+          <img src="./images/seats.svg" alt="seats">
           <p><span>${value.Company1.Features2.seats}</span> Seats</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/luggage.svg" alt="luggage">
+          <img src="./images/luggage.svg" alt="luggage">
           <p><span>${
 						value.Company1.Features2.largeSuitcase
 					}</span> Large Suitcase</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public//images/bag.svg" alt="bag">
+          <img src=".//images/bag.svg" alt="bag">
           <p><span>${
 						value.Company1.Features2.smallSuitcase
 					}</span> Small Suitcase</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/door.svg" alt="door">
+          <img src="./images/door.svg" alt="door">
           <p><span>${value.Company1.Features2.doors}</span> Doors</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/transmision.svg" alt="transmision">
+          <img src="./images/transmision.svg" alt="transmision">
           <p><span>${
 						value.Company1.Features2.transmition
 					}</span> Transmition</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/air-conditioning.svg" alt="">
+          <img src="./images/air-conditioning.svg" alt="">
           <p>${value.Company1.Features2.air}</p>
         </div>
       </div>
@@ -84,47 +83,45 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>AR - ${
-                    value.Company1.Rates.AR.RateData.name
-                  }</p>
+                  <p>AR - ${value.Company1.Rates.AR.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[5]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[6]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[7]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsAR[8]}</p>
                   </div>
                 </div>
@@ -149,35 +146,33 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>4M - ${
-                    value.Company1.Rates["4M"].RateData.name
-                  }</p>
+                  <p>4M - ${value.Company1.Rates["4M"].RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusions4M[5]}</p>
                   </div>
                 </div>
@@ -202,35 +197,33 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>F2 - ${
-                    value.Company1.Rates.F2.RateData.name
-                  }</p>
+                  <p>F2 - ${value.Company1.Rates.F2.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsF2[5]}</p>
                   </div>
                 </div>
@@ -255,13 +248,11 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>SC - ${
-                    value.Company1.Rates.SC.RateData.name
-                  }</p>
+                  <p>SC - ${value.Company1.Rates.SC.RateData.name}</p>
                 </div>
               </div>
             </div>
@@ -284,35 +275,33 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>H8 - ${
-                    value.Company1.Rates.H8.RateData.name
-                  }</p>
+                  <p>H8 - ${value.Company1.Rates.H8.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsH8[5]}</p>
                   </div>
                 </div>
@@ -343,40 +332,40 @@ export const createCards = (data, card) => {
         <p>${value.Company2.Name}</p>
       </div>
       <div class="card__button">
-        <button> <img src="./public/images/check.svg" alt="checked"> Book now!</button>
+        <button> <img src="./images/check.svg" alt="checked"> Book now!</button>
       </div>
     </header>
     <div class="card__content">
       <div class="card__characteristics">
         <h3>Characteristics</h3>
         <div class="card__characteristics__item">
-          <img src="./public/images/seats.svg" alt="seats">
+          <img src="./images/seats.svg" alt="seats">
           <p><span>${value.Company2.Features2.seats}</span> Seats</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/luggage.svg" alt="luggage">
+          <img src="./images/luggage.svg" alt="luggage">
           <p><span>${
 						value.Company2.Features2.largeSuitcase
 					}</span> Large Suitcase</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public//images/bag.svg" alt="bag">
+          <img src=".//images/bag.svg" alt="bag">
           <p><span>${
 						value.Company2.Features2.smallSuitcase
 					}</span> Small Suitcase</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/door.svg" alt="door">
+          <img src="./images/door.svg" alt="door">
           <p><span>${value.Company2.Features2.doors}</span> Doors</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/transmision.svg" alt="transmision">
+          <img src="./images/transmision.svg" alt="transmision">
           <p><span>${
 						value.Company2.Features2.transmition
 					}</span> Transmition</p>
         </div>
         <div class="card__characteristics__item">
-          <img src="./public/images/air-conditioning.svg" alt="">
+          <img src="./images/air-conditioning.svg" alt="">
           <p>${value.Company2.Features2.air}</p>
         </div>
       </div>
@@ -393,43 +382,41 @@ export const createCards = (data, card) => {
               <div class="modal">
                   <div class="modal__content">
                     <div class="modal__content__close">
-                      <img src="./public/images/close.svg" alt="close">
+                      <img src="./images/close.svg" alt="close">
                     </div>
                     <div class="modal__content__text">
                       <h3>Rates Information</h3>
-                      <p>HX - ${
-                        value.Company2.Rates.HX.RateData.name
-                      }</p>
+                      <p>HX - ${value.Company2.Rates.HX.RateData.name}</p>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[0]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[1]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[2]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>A${inclusionsHX[3]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[4]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[5]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[6]}</p>
                       </div>
                       <div class="modal__content__detail">
-                        <img src="./public/images/right.svg" alt="right">
+                        <img src="./images/right.svg" alt="right">
                         <p>${inclusionsHX[7]}</p>
                       </div>
                     </div>
@@ -454,39 +441,37 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>BZ - ${
-                    value.Company2.Rates.BZ.RateData.name
-                  }</p>
+                  <p>BZ - ${value.Company2.Rates.BZ.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[5]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsBZ[6]}</p>
                   </div>
                 </div>
@@ -511,35 +496,33 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>LQ - ${
-                    value.Company2.Rates.LQ.RateData.name
-                  }</p>
+                  <p>LQ - ${value.Company2.Rates.LQ.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLQ[5]}</p>
                   </div>
                 </div>
@@ -564,43 +547,41 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>LV - ${
-                    value.Company2.Rates.LV.RateData.name
-                  }</p>
+                  <p>LV - ${value.Company2.Rates.LV.RateData.name}</p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[2]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[3]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[4]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[5]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsLV[6]}</p>
                   </div>
                 </div>
@@ -625,23 +606,21 @@ export const createCards = (data, card) => {
             <div class="modal">
               <div class="modal__content">
                 <div class="modal__content__close">
-                  <img src="./public/images/close.svg" alt="close">
+                  <img src="./images/close.svg" alt="close">
                 </div>
                 <div class="modal__content__text">
                   <h3>Rates Information</h3>
-                  <p>B9 - ${
-                    value.Company2.Rates.B9.RateData.name
-                  }/p>
+                  <p>B9 - ${value.Company2.Rates.B9.RateData.name}/p>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsB9[0]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsB9[1]}</p>
                   </div>
                   <div class="modal__content__detail">
-                    <img src="./public/images/right.svg" alt="right">
+                    <img src="./images/right.svg" alt="right">
                     <p>${inclusionsB9[2]}</p>
                   </div>
                 </div>
