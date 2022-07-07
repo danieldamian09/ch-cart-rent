@@ -94,6 +94,7 @@ checkboxsConvertibles.forEach((item) => {
 })
 
 
+
 // Filtro
 category.addEventListener("change", (e) => {
 
@@ -127,6 +128,11 @@ transmitionManual.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterTransmitionManual, card);
+	} else {
+		// Limpiar las tarjetas
+		card.innerHTML = "";
+		// Crear las tarjetas
+		createCards(datos, card);
 	}
 });
 
@@ -142,6 +148,11 @@ transmitionAutomatic.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterTransmitionAutomatic, card);
+	} else {
+		// Limpiar las tarjetas
+		card.innerHTML = "";
+		// Crear las tarjetas
+		createCards(datos, card);
 	}
 });
 
@@ -172,6 +183,11 @@ seatsSevenMore.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterSeatsSevenMore, card);
+	} else {
+		// Limpiar las tarjetas
+		card.innerHTML = "";
+		// Crear las tarjetas
+		createCards(datos, card);
 	}
 });
 
@@ -187,5 +203,10 @@ convertibles.addEventListener("change", (e) => {
 
 		// Crear las tarjetas
 		createCards(filterConvertibles, card);
+	} else {
+		// Limpiar las tarjetas
+		card.innerHTML = "";
+		// Crear las tarjetas
+		createCards(datos, card);
 	}
 });
