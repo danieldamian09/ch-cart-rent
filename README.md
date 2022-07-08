@@ -1,7 +1,7 @@
 
-# Proyecto GREENFLAME
+# Proyecto Rent-Cart
 
-Proyecto realizado para la empresa Green Flame el cual consiste en simular un componente que muestra diferentes opciones para la renta de autos, se pueden realizar filtros de los autos de acuerdo estas características. Los datos que alimentan este componente vienen de una base de datos que se encuentra en la carpeta data, la cual simulamos un API. Para crear este proyecto se utilizó HTML, CSS y JavaScript vanilla, como entorno de desarrollo Vite.
+Proyecto realizado para simular un componente que muestra diferentes opciones para la renta de autos, se pueden realizar filtros de los autos de acuerdo estas características. Los datos que alimentan este componente vienen de una base de datos que se encuentra en la carpeta data, la cual simulamos un API. Para crear este proyecto se utilizó HTML, CSS y JavaScript vanilla, como entorno de desarrollo Vite.
 ## API Referencia
 
 #### Get all items
