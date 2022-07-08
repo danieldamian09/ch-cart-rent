@@ -1,13 +1,25 @@
 // Modulos
-import { checkboxFirstBlock, checkboxSecondBlock, checkboxThirdBlock } from './components/checkbox';
+import {
+	checkboxFirstBlock,
+	checkboxSecondBlock,
+	checkboxThirdBlock,
+} from "./components/checkbox";
 import {createCards} from "./components/createCards";
-import { createOptions } from './components/createOptions';
-import { modal } from './components/modal';
+import {createOptions} from "./components/createOptions";
+import {modal} from "./components/modal";
 import {data} from "./data/api";
+import {
+	filterByCategory,
+	filterByConvertibles,
+	filterBySeats,
+	filterBySeatsSevenMore,
+	filterByTransmitionAutomatic,
+	filterByTransmitionManual,
+} from "./helpers/filter";
 
-const { cars } = data;
+// Datos
+const {cars} = data;
 const datos = Object.entries(cars);
-
 
 // Variables
 const card = document.querySelector(".card");
@@ -19,19 +31,26 @@ const seatsFive = document.querySelector("#seats-five");
 const seatsSevenMore = document.querySelector("#seats-seven-more");
 const convertibles = document.querySelector("#convertibles");
 // Variables de Chekbox
-const checkboxsTransmition = document.querySelectorAll(".filter__transmition input[type=checkbox]");
-const checkboxsSeats = document.querySelectorAll(".filter__seats input[type=checkbox]");
-const checkboxsConvertibles = document.querySelectorAll(".filter__convertibles input[type=checkbox]");
+const checkboxsTransmition = document.querySelectorAll(
+	".filter__transmition input[type=checkbox]"
+);
+const checkboxsSeats = document.querySelectorAll(
+	".filter__seats input[type=checkbox]"
+);
+const checkboxsConvertibles = document.querySelectorAll(
+	".filter__convertibles input[type=checkbox]"
+);
 
-// Funciones
+
+// Pintar los componentes primera vez
 document.addEventListener("DOMContentLoaded", () => {
 	// Crear las tarjetas
 	createCards(datos, card);
 	// Crear los options
 	createOptions(datos, category);
 	// Modal
-	const openMoldal = document.querySelectorAll(".card__aviable__title");
-	modal(openMoldal);
+	const openModalInit = document.querySelectorAll(".card__aviable__title");
+	modal(openModalInit);
 });
 
 
@@ -43,150 +62,37 @@ checkboxThirdBlock(checkboxsConvertibles);
 
 // Filtrar por Category
 category.addEventListener("change", (e) => {
-
-	// Validar si el valor es diferente a "all"
-	if (e.target.value !== "all") {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por categoria
-		const filterCategory = datos.filter((item) => {
-			return item[0] === e.target.value;
-		});
-		// Crear las tarjetas
-		createCards(filterCategory, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}else{
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.value;
+	filterByCategory(value, datos, card);
 });
 
 // Filtar por Transmision Manual
 transmitionManual.addEventListener("change", (e) => {
 	// Filtar si esta checked
-	if (e.target.checked) {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por transmision manual
-		const filterTransmitionManual = datos.filter((item) => {
-			return item[1].Company1.TransmissionType  === "Manual";
-		});
-
-		// Crear las tarjetas
-		createCards(filterTransmitionManual, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	} else {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.checked;
+	filterByTransmitionManual(value, datos, card);
 });
 
 // Filtar por Transmision Automatic
 transmitionAutomatic.addEventListener("change", (e) => {
-	// Filtar si esta checked
-	if (e.target.checked) {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por transmision manual
-		const filterTransmitionAutomatic = datos.filter((item) => {
-			return item[1].Company1.TransmissionType === "Automatic";
-		});
-
-		// Crear las tarjetas
-		createCards(filterTransmitionAutomatic, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	} else {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.checked;
+	filterByTransmitionAutomatic(value, datos, card);
 });
 
-// Filtar por Seats
+// Filtar por 5 Seats
 seatsFive.addEventListener("change", (e) => {
-	// Filtar si esta checked
-	if (e.target.checked) {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por transmision manual
-		const filterSeatsFive = datos.filter((item) => {
-			return item[1].Company1.Features2.seats === "5";
-		});
-
-		// Crear las tarjetas
-		createCards(filterSeatsFive, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	} else {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.checked;
+	filterBySeats(value, datos, card);
 });
 
 // Filtar por Seats More
 seatsSevenMore.addEventListener("change", (e) => {
-	// Filtar si esta checked
-	if (e.target.checked) {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por transmision manual
-		const filterSeatsSevenMore = datos.filter((item) => {
-			return item[1].Company1.Features2.seats === "7" || item[1].Company1.Features2.seats === "12";
-		});
-
-		// Crear las tarjetas
-		createCards(filterSeatsSevenMore, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	} else {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.checked;
+	filterBySeatsSevenMore(value, datos, card);
 });
 
 // Filtrar por Convertibles
 convertibles.addEventListener("change", (e) => {
-	// Filtar si esta checked
-	if (e.target.checked) {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Filtrar por transmision manual
-		const filterConvertibles = datos.filter((item) => {
-			return item[1].Company1.Features2.category === "Convertible";
-		});
-
-		// Crear las tarjetas
-		createCards(filterConvertibles, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	} else {
-		// Limpiar las tarjetas
-		card.innerHTML = "";
-		// Crear las tarjetas
-		createCards(datos, card);
-		const openMoldal = document.querySelectorAll(".card__aviable__title");
-		modal(openMoldal);
-	}
+	let value = e.target.checked;
+	filterByConvertibles(value, datos, card);
 });
