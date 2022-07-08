@@ -47,15 +47,17 @@ const spinner = document.querySelector("#spinner");
 document.addEventListener("DOMContentLoaded", () => {
 	// Spinner
 	spinner.style.display = "block";
-	// Crear las tarjetas
-	createCards(datos, card);
-	// Crear los options
-	createOptions(datos, category);
-	// Modal
-	const openModalInit = document.querySelectorAll(".card__aviable__title");
-	modal(openModalInit);
-	// Spinner
-	spinner.style.display = "none";
+	setTimeout(() => {
+		// Crear las tarjetas
+		createCards(datos, card);
+		// Crear los options
+		createOptions(datos, category);
+		// Modal
+		const openModalInit = document.querySelectorAll(".card__aviable__title");
+		modal(openModalInit);
+		// Spinner
+		spinner.style.display = "none";
+	}, 1000);
 });
 
 // Elegir solo un checkbox

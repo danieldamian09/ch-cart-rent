@@ -130,7 +130,7 @@ export const createCards = (data, card) => {
             <p >Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company1.Rates.AR.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -181,7 +181,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company1.Rates["4M"].RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -232,7 +232,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company1.Rates.F2.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -259,7 +259,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company1.Rates.SC.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -310,7 +310,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company1.Rates.H8.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -425,7 +425,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company2.Rates.HX.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -480,7 +480,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company2.Rates.BZ.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -531,7 +531,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company2.Rates.LQ.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -590,7 +590,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company2.Rates.LV.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
@@ -629,7 +629,7 @@ export const createCards = (data, card) => {
             <p>Rates Inclusions</p>
           </div>
           <div class="card__aviable__price">
-            <p>USD <span>${parseInt(
+            <p>USD <span>${parseFloat(
 							value.Company2.Rates.B9.RateTotalAmount
 						).toFixed(2)}</span></p>
           </div>
