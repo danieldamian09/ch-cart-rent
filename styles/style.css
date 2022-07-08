@@ -4,15 +4,13 @@ body {
 	font-family: Rubik-Regular, sans-serif;
 }
 
-
-
 /* Box filter */
 .filter {
 	background-color: #fff;
 	margin: 1rem auto 1.5rem;
 	display: grid;
 	grid-template-columns: 2.5fr 3.5fr;
-	width: 85%;
+	width: 80%;
 	padding: 0 0.8rem;
 	border-radius: 10px;
 	box-shadow: -5px 6px 5px #ccc5c585;
@@ -32,7 +30,7 @@ body {
 	color: #ca2626;
 	font-family: Rubik-Regular, sans-serif;
 	font-weight: 600;
-  letter-spacing: 0.05em;
+	letter-spacing: 0.05em;
 }
 
 .filter__select select {
@@ -80,7 +78,7 @@ body {
 
 /* Card */
 .card__container {
-	width: 85%;
+	width: 80%;
 	background-color: #fff;
 	margin: 0 auto 2rem;
 	border-radius: 10px;
@@ -124,6 +122,10 @@ body {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	/* max-width: 210px; */
+}
+
+.card__button {
+	padding-left: 6rem;
 }
 
 .card__button button {
@@ -185,7 +187,9 @@ body {
 
 /* Aviables */
 .card__aviable__options {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	/* display: flex; */
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -218,16 +222,17 @@ body {
 	padding: 0;
 	font-weight: 600;
 	cursor: pointer;
+	text-align: center;
 }
 
 /* Modal */
 
-.modal{
-  display: none;
+.modal {
+	display: none;
 }
 
 .modal--active {
-  display: block;
+	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -239,7 +244,6 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-
 
 .modal__content {
 	width: 28%;
@@ -266,7 +270,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-weight: 700;
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .modal__content__text p {
@@ -282,17 +286,19 @@ body {
 	align-items: center;
 }
 
-.modal__content__detail p{
-  color: #8a7f7f;
-  font-weight: 600;
-  font-size: 0.8rem;
-  margin: 0.5rem 0;
-  padding: 0;
+.modal__content__detail p {
+	color: #8a7f7f;
+	font-weight: 600;
+	font-size: 0.8rem;
+	margin: 0.5rem 0;
+	padding: 0;
 }
 
-
-
-
+.card__aviable__price {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
 
 .card__aviable__price p {
 	color: #ca2626;
@@ -304,6 +310,5 @@ body {
 
 .card__aviable__price span {
 	font-weight: 600;
-	font-size: 1rem;
-	margin-left: 0.5rem;
+	font-size: 1.2rem;
 }

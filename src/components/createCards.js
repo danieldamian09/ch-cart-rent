@@ -127,7 +127,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p >Rates Inclusions</p>
+            <p >Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -178,7 +178,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -229,7 +229,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -256,7 +256,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -307,7 +307,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -422,7 +422,7 @@ export const createCards = (data, card) => {
                     </div>
                   </div>
                 </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -477,7 +477,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -528,7 +528,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -587,7 +587,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
@@ -626,7 +626,7 @@ export const createCards = (data, card) => {
                 </div>
               </div>
             </div>
-            <p>Rates Inclusions</p>
+            <p>Rate Inclusions</p>
           </div>
           <div class="card__aviable__price">
             <p>USD <span>${parseFloat(
