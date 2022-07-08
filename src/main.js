@@ -1,5 +1,8 @@
 // Modulos
+import { checkboxFirstBlock, checkboxSecondBlock, checkboxThirdBlock } from './components/checkbox';
 import {createCards} from "./components/createCards";
+import { createOptions } from './components/createOptions';
+import { modal } from './components/modal';
 import {data} from "./data/api";
 
 const { cars } = data;
@@ -15,95 +18,30 @@ const transmitionAutomatic = document.querySelector("#transmition-automatic");
 const seatsFive = document.querySelector("#seats-five");
 const seatsSevenMore = document.querySelector("#seats-seven-more");
 const convertibles = document.querySelector("#convertibles");
+// Variables de Chekbox
+const checkboxsTransmition = document.querySelectorAll(".filter__transmition input[type=checkbox]");
+const checkboxsSeats = document.querySelectorAll(".filter__seats input[type=checkbox]");
+const checkboxsConvertibles = document.querySelectorAll(".filter__convertibles input[type=checkbox]");
 
 // Funciones
 document.addEventListener("DOMContentLoaded", () => {
 	// Crear las tarjetas
 	createCards(datos, card);
 	// Crear los options
-	createOptions(datos);
+	createOptions(datos, category);
 	// Modal
 	const openMoldal = document.querySelectorAll(".card__aviable__title");
 	modal(openMoldal);
-
 });
 
-// Todo: que le modal se vuleva a llamar despues del filter
-function modal (openModal){
-	// Abrir el modal
-	openModal.forEach((item) => {
-		item.addEventListener("click", (e) => {
-			// Current Modal
-			const currentModal = e.target.previousElementSibling;
-			if (currentModal !== null) {
-				currentModal.classList.add("modal--active");
-				// Current Modal Close validar si existe
-				const currentModalClose = currentModal.querySelector(
-					".modal__content__close"
-				);
-				currentModalClose.addEventListener("click", () => {
-					currentModal.classList.remove("modal--active");
-				});
-			}
-		});
-	});
-
-}
-
-
-// Crear los options 
-const createOptions = (data) => {
-
-	const options = data.map((item) => {
-		const option = document.createElement("option");
-		option.value = item[0];
-		option.textContent = item[0];
-		return option;
-	});
-	category.append(...options);
-	
-}
 
 // Elegir solo un checkbox
-const checkboxsTransmition = document.querySelectorAll(".filter__transmition input[type=checkbox]");
-checkboxsTransmition.forEach((item) => {
-	item.addEventListener("click", (e) => {
-		if (e.target.checked) {
-			checkboxsTransmition.forEach((item) => {
-				item.checked = false;
-			});
-			e.target.checked = true;
-		}
-	});
-})
-
-const checkboxsSeats = document.querySelectorAll(".filter__seats input[type=checkbox]");
-checkboxsSeats.forEach((item) => {
-	item.addEventListener("click", (e) => {
-		if (e.target.checked) {
-			checkboxsSeats.forEach((item) => {
-				item.checked = false;
-			});
-			e.target.checked = true;
-		}
-	});
-})
-
-const checkboxsConvertibles = document.querySelectorAll(".filter__convertibles input[type=checkbox]");
-checkboxsConvertibles.forEach((item) => {
-	item.addEventListener("click", (e) => {
-		if (e.target.checked) {
-			checkboxsConvertibles.forEach((item) => {
-				item.checked = false;
-			});
-			e.target.checked = true;
-		}
-	});
-})
+checkboxFirstBlock(checkboxsTransmition);
+checkboxSecondBlock(checkboxsSeats);
+checkboxThirdBlock(checkboxsConvertibles);
 
 
-
-// Filtro
+// Filtrar por Category
 category.addEventListener("change", (e) => {
 
 	// Validar si el valor es diferente a "all"
@@ -128,6 +66,7 @@ category.addEventListener("change", (e) => {
 	}
 });
 
+// Filtar por Transmision Manual
 transmitionManual.addEventListener("change", (e) => {
 	// Filtar si esta checked
 	if (e.target.checked) {
@@ -152,6 +91,7 @@ transmitionManual.addEventListener("change", (e) => {
 	}
 });
 
+// Filtar por Transmision Automatic
 transmitionAutomatic.addEventListener("change", (e) => {
 	// Filtar si esta checked
 	if (e.target.checked) {
@@ -176,6 +116,7 @@ transmitionAutomatic.addEventListener("change", (e) => {
 	}
 });
 
+// Filtar por Seats
 seatsFive.addEventListener("change", (e) => {
 	// Filtar si esta checked
 	if (e.target.checked) {
@@ -200,6 +141,7 @@ seatsFive.addEventListener("change", (e) => {
 	}
 });
 
+// Filtar por Seats More
 seatsSevenMore.addEventListener("change", (e) => {
 	// Filtar si esta checked
 	if (e.target.checked) {
@@ -224,6 +166,7 @@ seatsSevenMore.addEventListener("change", (e) => {
 	}
 });
 
+// Filtrar por Convertibles
 convertibles.addEventListener("change", (e) => {
 	// Filtar si esta checked
 	if (e.target.checked) {
