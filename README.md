@@ -38,4 +38,4 @@ npm run dev
 
 ## Demo
 
-https://mercat-ecommerce-humberto.netlify.app/
+https://rent-cart-challenge-humberto-rivero.netlify.app/
