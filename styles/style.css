@@ -189,7 +189,6 @@ body {
 .card__aviable__options {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	/* display: flex; */
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -298,17 +297,19 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	width: 100%;
 }
 
 .card__aviable__price p {
 	color: #ca2626;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	margin: 0;
 	padding: 0;
 	font-weight: 500;
 }
 
 .card__aviable__price span {
+	display: inline-block;
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
